@@ -14,6 +14,7 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="bower_components/angular-material/themes/indigo-theme.css" />
   <!-- endbuild -->
 </head>
 
@@ -23,27 +24,27 @@
     <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="container">
-    <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li class="active"><a ng-href="#">Home</a>
-        </li>
-        <li><a ng-href="#/about">About</a>
-        </li>
-        <li><a ng-href="#">Contact</a>
-        </li>
-      </ul>
-      <h3 class="text-muted">blog</h3>
-    </div>
+  <div layout="column" layout-fill>
+    <md-toolbar md-scroll-shrink class="md-indigo-theme md-medium-tall navbar-fixed-top" layout="column">
+      <span flex></span>
+      <h2 class="md-toolbar-tools md-toolbar-tools-bottom" layout="row" layout-align="space-between center">
+          <span>
+            Daniel Parker
+          </span>
+
+          <!-- My profile image being taken from the gravatar server -->
+          <img src="http://www.gravatar.com/avatar/ae0e1b39ab2d18848ea5de6c33ac36db.jpg?s=200" class="gravatar"></img>
+
+          <md-button class="about-button">
+            <a href="#/about">About Me</a>
+          </md-button>
+      </h2>
+      <span flex></span>
+    </md-toolbar>
 
     <div ng-view=""></div>
 
-    <div class="footer">
-      <p>
-        <span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-    </div>
   </div>
-
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
@@ -101,7 +102,6 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
-  <script src="scripts/controllers/about.js"></script>
   <!-- endbuild -->
 </body>
 
