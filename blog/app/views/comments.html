@@ -1,14 +1,37 @@
 <md-list>
+  <md-item>
+    <md-card>
+      <h4>New comment</h4>
+      <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.submitComment(article)" novalidate>
+        <fieldset class="form-group">
+          <input ng-model="commentCtrl.newComment.name" class="form-control" type="text" placeholder="Display name (optional)"></input>
+        </fieldset>
+        <fieldset class="form-group">
+          <input ng-model="commentCtrl.newComment.email" class="form-control" type="email" placeholder="Email address" required></input>
+        </fieldset>
+        <fieldset class="form-group">
+          <i><a href="http://getemoji.com/" target="_blank">Emoji</a> and <a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub</a> markdown syntax are supported.</i>
+          <textarea style="resize: vertical;" ng-model="commentCtrl.newComment.body" class="form-control" type="text" placeholder="Comment message" required></textarea>
+        </fieldset>
+        <fieldset class="form-group" layout="row">
+          <md-button class="md-primary md-raised">Submit</md-button>
+        </fieldset>
+      </form>
+    </md-card>
+  </md-item>
   <md-item ng-repeat="comment in article.comments">
-    <md-item-content layout="column" style="text-align: left;">
-      <span flex>{{comment.author}} -
-        <strong><a href="mailto:{{comment.email}}">{{comment.email}}</a>
-        </strong>
-        <br/>
-      </span>
-      <blockquote>
-        {{comment.body}}
-      </blockquote>
+    <md-item-content layout="column" layout-align="center start">
+      <md-card>
+        <span flex>{{comment.name}} -
+          <strong><a href="mailto:{{comment.email}}">{{comment.email}}</a>
+          </strong>
+          <span class="timestamp">on {{comment.timestamp | date: 'medium'}}</span>
+          <br/>
+        </span>
+        <blockquote>
+          <div btf-markdown="comment.body | emoji"></div>
+        </blockquote>
+      </md-card>
     </md-item-content>
   </md-item>
 </md-list>

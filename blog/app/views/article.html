@@ -2,20 +2,21 @@
   <span flex></span>
   <md-card flex="55">
     <div class="article-title">
-      <h2>{{article.title}}</h2>
+      <h2 btf-markdown="article.title | emoji"></h2>
     </div>
     <div class="article-content">
-      <div btf-markdown="article.body"></div>
+      <div btf-markdown="article.body | emoji"></div>
     </div>
+    <md-divider></md-divider>
     <div class="article-comments-title">
       <h3>Comments</h3>
     </div>
     <comments></comments>
     <div layout="row">
       <span flex></span>
-      <md-button class="md-fab md-primary button-new-comment">
+      <!-- <md-button class="md-fab md-primary button-new-comment">
         <l style="font-size: 2em; position: absolute; top: 6px; left: 20px;">+</l>
-      </md-button>
+      </md-button> -->
     </div>
   </md-card>
   <span flex></span>

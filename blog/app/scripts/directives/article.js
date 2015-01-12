@@ -22,7 +22,24 @@
       restrict: 'E',
       templateUrl: 'views/comments.html',
       controller: function() {
+        this.newComment = {
+          name: '',
+          email: '',
+          body: ''
+        };
 
+        this.submitComment = function(article) {
+          if (this.newComment.name === '') {
+            this.newComment.name = 'Anonymous';
+          }
+          this.newComment.timestamp = Date.now();
+          article.comments.push(this.newComment);
+          this.newComment = {
+            name: '',
+            email: '',
+            body: ''
+          };
+        };
       },
       controllerAs: 'commentCtrl'
     };

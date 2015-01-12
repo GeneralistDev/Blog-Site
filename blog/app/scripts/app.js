@@ -20,7 +20,7 @@
     'ngMaterial',
     'btford.markdown',
     'article-directive',
-    'emoji'
+    'dbaq.emoji'
   ]).config(['$routeProvider', 'markdownConverterProvider', function($routeProvider, markdownConverterProvider) {
     $routeProvider
       .when('/', {
