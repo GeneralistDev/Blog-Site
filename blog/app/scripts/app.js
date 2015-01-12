@@ -17,8 +17,9 @@
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
-  ]).config(function($routeProvider) {
+    'ngMaterial',
+    'btford.markdown'
+  ]).config(['$routeProvider', 'markdownConverterProvider', function($routeProvider, markdownConverterProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -27,5 +28,9 @@
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+    markdownConverterProvider.config({
+      extensions: ['github']
+    });
+  }]);
 })();
