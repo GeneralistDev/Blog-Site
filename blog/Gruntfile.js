@@ -329,6 +329,16 @@ module.exports = function (grunt) {
 
     // Copies remaining files to places other tasks can use
     copy: {
+      max:{
+        files: [{
+          expand: true,
+          flatten: true,
+          src: [
+            'bower_components/angular-emoji-filter-hd/lib/*.png'
+          ],
+          dest: 'dist/styles/'
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -425,6 +435,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
+    'copy:max',
     'cdnify',
     'cssmin',
     'uglify',
