@@ -44,6 +44,7 @@
         body: '',
         comments: []
       };
+      $scope.articleForm.$setPristine();
     };
 
     this.clear = function() {
