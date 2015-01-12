@@ -19,7 +19,8 @@
       comments: [{
         name: 'Dale Salter',
         email: 'compulsed@gmail.com',
-        body: 'I really like your new blog, you should make me one too.'
+        body: 'I really like your new blog, you should make me one too.',
+        timestamp: Date.now()
       }]
     }, {
       title: 'A new blog has arrived!!',
