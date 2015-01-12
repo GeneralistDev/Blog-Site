@@ -19,7 +19,8 @@
     'ngTouch',
     'ngMaterial',
     'btford.markdown',
-    'article-directive'
+    'article-directive',
+    'emoji'
   ]).config(['$routeProvider', 'markdownConverterProvider', function($routeProvider, markdownConverterProvider) {
     $routeProvider
       .when('/', {

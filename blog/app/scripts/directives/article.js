@@ -16,4 +16,15 @@
       templateUrl: 'views/new_article.html'
     };
   });
+
+  app.directive('comments', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'views/comments.html',
+      controller: function() {
+
+      },
+      controllerAs: 'commentCtrl'
+    };
+  });
 })();

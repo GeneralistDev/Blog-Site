@@ -10,23 +10,12 @@
     <div class="article-comments-title">
       <h3>Comments</h3>
     </div>
-    <md-list>
-      <md-item ng-repeat="comment in article.comments">
-        <md-item-content layout="column" style="text-align: left;">
-          <span flex>{{comment.author}} -
-            <strong><a href="mailto:{{comment.email}}">{{comment.email}}</a>
-            </strong>
-            <br/>
-          </span>
-          <blockquote>
-            {{comment.body}}
-          </blockquote>
-        </md-item-content>
-      </md-item>
-    </md-list>
+    <comments></comments>
     <div layout="row">
       <span flex></span>
-      <md-button class="md-fab md-primary button-new-comment">+</md-button>
+      <md-button class="md-fab md-primary button-new-comment">
+        <l style="font-size: 2em; position: absolute; top: 6px; left: 20px;">+</l>
+      </md-button>
     </div>
   </md-card>
   <span flex></span>

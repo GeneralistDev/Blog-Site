@@ -1,0 +1,14 @@
+<md-list>
+  <md-item ng-repeat="comment in article.comments">
+    <md-item-content layout="column" style="text-align: left;">
+      <span flex>{{comment.author}} -
+        <strong><a href="mailto:{{comment.email}}">{{comment.email}}</a>
+        </strong>
+        <br/>
+      </span>
+      <blockquote>
+        {{comment.body}}
+      </blockquote>
+    </md-item-content>
+  </md-item>
+</md-list>
