@@ -31,6 +31,23 @@
         body: 'I really like your new blog, you should make me one too.'
       }]
     }];
+
+    this.newPostFormVisible = true;
+
+    this.livePreview = {
+      title: '',
+      body: '',
+      comments: []
+    };
+
+    this.createArticle = function() {
+      this.articles.push(this.livePreview);
+      this.livePreview = {
+        title: '',
+        body: '',
+        comments: []
+      };
+    };
   });
 
 })();

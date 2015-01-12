@@ -1,10 +1,16 @@
 @import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
-
 /*************
 * BODY
 *************/
 body {
   padding-top: 88px;
+}
+
+/*************
+* GENERAL
+*************/
+.break-words {
+  word-break: break-all;
 }
 
 /*************
@@ -31,5 +37,19 @@ body {
 }
 
 /*************
-*
+* NEW ARTICLE
 *************/
+.new-article-divider {
+  margin-top: 10px;
+}
+
+/*************
+* FORM VALID
+**************/
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}

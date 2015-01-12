@@ -1,0 +1,31 @@
+<md-item ng-show="mainCtrl.newPostFormVisible">
+  <md-item-content>
+    <span flex></span>
+    <md-card flex="55">
+      <h2>New Article</h2>
+      <form name="articleForm" ng-submit="articleForm.$valid && mainCtrl.createArticle()" novalidate>
+        <fieldset class="form-group">
+          <input ng-model="mainCtrl.livePreview.title" class="form-control" type="text" placeholder="Article title" required></input>
+        </fieldset>
+        <fieldset class="form-group">
+          <textarea ng-model="mainCtrl.livePreview.body" class="form-control" type="text" placeholder="Article content..." required></textarea>
+        </fieldset>
+        <div layout="row">
+          <span flex></span>
+          <md-button type="submit" class="md-button md-raised md-primary button-new-article">Publish</md-button>
+        </div>
+      </form>
+
+      <md-divider class="new-article-divider"></md-divider>
+      
+      <h3 style="color: gray;">Live Preview</h3>
+      <div class="article-title">
+        <h1 class="break-words" btf-markdown="mainCtrl.livePreview.title"></h1>
+      </div>
+      <div class="article-content">
+        <div class="break-words" btf-markdown="mainCtrl.livePreview.body"></div>
+      </div>
+    </md-card>
+    <span flex></span>
+  </md-item-content>
+</md-item>

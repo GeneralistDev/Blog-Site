@@ -18,7 +18,8 @@
     'ngSanitize',
     'ngTouch',
     'ngMaterial',
-    'btford.markdown'
+    'btford.markdown',
+    'article-directive'
   ]).config(['$routeProvider', 'markdownConverterProvider', function($routeProvider, markdownConverterProvider) {
     $routeProvider
       .when('/', {
