@@ -38,7 +38,7 @@
     };
 
     this.createArticle = function() {
-      this.articles.push(this.livePreview);
+      this.articles.unshift(this.livePreview);
       this.livePreview = {
         title: '',
         body: '',
