@@ -1,7 +1,7 @@
 <md-item ng-show="mainCtrl.newPostFormVisible">
-  <md-item-content>
-    <span flex></span>
-    <md-card flex="55">
+  <md-item-content layout="row">
+    <span flex-gt-sm></span>
+    <md-card flex-gt-sm="55">
       <h2>New Article</h2>
       <form name="articleForm" ng-submit="articleForm.$valid && mainCtrl.createArticle()" novalidate>
         <fieldset class="form-group">
@@ -17,7 +17,6 @@
           <md-button type="submit" class="md-raised md-primary button-new-article">Publish</md-button>
         </div>
       </form>
-
       <md-divider class="new-article-divider"></md-divider>
 
       <h3 style="color: gray;">Live Preview</h3>

@@ -1,4 +1,6 @@
 <md-list>
+
+  <!-- New comment card -->
   <md-item>
     <md-card>
       <h4>New comment</h4>
@@ -19,6 +21,8 @@
       </form>
     </md-card>
   </md-item>
+
+  <!-- Rest of the existing comments -->
   <md-item ng-repeat="comment in article.comments">
     <md-item-content layout="column" layout-align="center start">
       <md-card>
